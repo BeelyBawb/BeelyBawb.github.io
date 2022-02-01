@@ -1,35 +1,43 @@
-<!-- html "elements" are identifed by tags.
-opening tag "<p>" "content", and closing tag "</p>" define an html element. Closing tag is the same as opening tag with addition of "/" after the "<"
-Not all html elements have cosing tags. If an element does not have content, it will only have a opening tag, like break element <br> -->
-
 <!DOCTYPE html>      <!-- every webpage must start with <!DOCTYPE html> declaration (it is not a tag). It is information to the browser what document type to exspect. "html" = HTML5 document -->
-<html>               <!-- <html> tag represents root of html document and must be under DOCTYPE declaration., all other elements must be contained betwee the html tags and comprises the html element -->
+<html lang=en>               <!-- <html> tag represents root of html document and must be under DOCTYPE declaration., all other elements must be contained betwee the html tags and comprises the html element -->
     <head>                <!-- <head> </head> elements between the head tags help browser render web page but does not contain anything seen in the webpage -->
         <title>Project: Recipe book</title>     <!-- <title> </title> element browser uses in tab of webpage as title -->
         <meta charset="utf-8">     <!-- meta tag gives browser more details how to render the page, utf-8 is for rendering English language characters -->
 
-	<style>  
-	<!-- <style> contains Cascading Style Sheet - CSS rules, used to style the html document, and dexribes how html element s should be displayed.
-	rules are applied to specific html elements types, and any element type with designated id and/or class
-	.mainTitle, rule applied to all elements with class=.mainTitle designation. class can be applied to multiple elements.
-	ol, rule applied to all <ol> </ol> elements
-	#recipe1, rule applied to all elements with id=recipe1 designation. id must be only used once in webpage and be unique, otherwise browser may not render correctly. -->
+<!-- html "elements" are identifed by tags.
+opening tag "<p>" "content", and closing tag "</p>" define an html element. Closing tag is the same as opening tag with addition of "/" after the "<"
+Not all html elements have closing tags. If an element does not have content, it will only have a opening tag, like break element <br>
+Tags may have attributes, which are added into the opening tag, for example <p id="greatParagragh"> adds an identification label to this <p> tag that can uniquely identify this <p> tag from other <p> tags-->
 
-        .mainTitle {
-            color: rgb(222, 53, 222);
-        }
-        ol {
-            color: rgb(25, 56, 232);
-        }
-        #recipe1 {
-            color: rgb(237, 159, 14);
-        }
-        #recipe2 {
-            color: rgb(232, 21, 77);
-        }
+	<style>  
+	<!-- <style> contains Cascading Style Sheet - CSS rules to select elements on a web page so that we can then style those elements.
+	Format is "selector" { property: value;}.
+	"selectors" are used to apply rules to specific htnl elements. "selector" can be 
+		- HTML elements—<h1>, <p>, <li>, <body>—and any other HTML element. "<>" are removed when used as a selector.
+		- id, indicated by "#" in front of selector id name. id's must be unique and not used on other elements, otherwise the browser may not render correctly
+		- class, indicated by "." in front of class name. Class name does not need to be unique and can be used on multiple elements in the document.  All used elements will have the rule applied. -->
+	    .mainTitle {color: rgb(222, 144, 222);}
+        ol {color: rgb(25, 56, 232);}
+        #recipe1 {color: rgb(237, 159, 14);}
+        #recipe2 {color: rgb(232, 21, 77);}
         #recipe3 {
-            color: rgb(88, 115, 40);
-        }
+				font-family: Helvetica, sans-serif; <!-- 
+				- property can have multiple names as fallback if one is not available example if Helvetica is not available with use sans-serif (separate by ,). font names with spaces must be in ""
+				- can be specific font name ("Helvetica","times", "courier", "arial")
+				- or generic font name (serif, san-serif, cursive, fantasy, monospace).  Browser will use computer default font for generic font -->
+				font-size: 11px; <!--
+				propery has many different dimensions, some examples
+				- fixed size (px, cm, mm, in, pt points, pc pica)
+				- relative size (em element, rem root element, vw viewport width, vh viewport height, vmin viewport min, vmax viewport max, % of parent element)-->
+				font-style: italic <!--
+				property options normal, italic, oblique, initial - default, inherit -->
+				font-weight: bold; <!--
+				property options: normal, bold, bolder, lighter, 100-900 thin to thick characters 400 normal, initial, inherit -->
+				color: rgb(88, 115, 40); <!--
+				sets text color of element. Property can be rgb, hexidecimal, or predefined colors such as red blue brown green. -->
+				background-color: green; <!--
+				sets background color of element.  Proerty values same as for color property.
+		}
     </style>
     </head>
     
@@ -41,8 +49,9 @@ Not all html elements have cosing tags. If an element does not have content, it 
         <h2>Contents:</h2>
         
         <ol>
+		<!-- <a></a> tag stands for "anchor" and is used to create a hypertext link. "href" is the "hypertext reference" attribute and indicates the destination of the hyperlink. -->
             <li><a href="#recipe1">Grill Cheese Sandwich</a></li>
-            <li><a href="#recipe2">Tomato Soup</a></li>
+            <li><a href="#recipe2">Tomato Soup</a></li> 
             <li><a href="#recipe3">Antipasto Salad</a></li>
         </ol>
         
@@ -75,7 +84,7 @@ Not all html elements have cosing tags. If an element does not have content, it 
             </tr>    
             </tbody>
         </table>
-        
+       
         <p><strong>Step 1:</strong> butter bread. <!-- paragraph tag -->
         <br> <!-- break tag, line break -->
 		<strong>Step 2:</strong> <!-- bold text -->
@@ -157,9 +166,8 @@ Not all html elements have cosing tags. If an element does not have content, it 
 <strong>Step 3:</strong> mix in bowl.<br>
 </p>
 
-    <p><em>Source: <a href="https://www.allrecipes.com/recipe/206160/russian-garden-salad/">allrecipes website</a></em></p>
+    <p>Source: <a href="https://www.allrecipes.com/recipe/206160/russian-garden-salad/"> <em>allrecipes website - russian garden salad</em></a></p>
     
     
     </body>
 </html>
-© 2022 GitHub, Inc.
