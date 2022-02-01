@@ -1,10 +1,20 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Project: Recipe book</title>
-        <meta charset="utf-8">
-        </head>
-    <style>
+<!-- html "elements" are identifed by tags.
+opening tag "<p>" "content", and closing tag "</p>" define an html element. Closing tag is the same as opening tag with addition of "/" after the "<"
+Not all html elements have cosing tags. If an element does not have content, it will only have a opening tag, like break element <br> -->
+
+<!DOCTYPE html>      <!-- every webpage must start with <!DOCTYPE html> declaration (it is not a tag). It is information to the browser what document type to exspect. "html" = HTML5 document -->
+<html>               <!-- <html> tag represents root of html document and must be under DOCTYPE declaration., all other elements must be contained betwee the html tags and comprises the html element -->
+    <head>                <!-- <head> </head> elements between the head tags help browser render web page but does not contain anything seen in the webpage -->
+        <title>Project: Recipe book</title>     <!-- <title> </title> element browser uses in tab of webpage as title -->
+        <meta charset="utf-8">     <!-- meta tag gives browser more details how to render the page, utf-8 is for rendering English language characters -->
+
+	<style>  
+	<!-- <style> contains Cascading Style Sheet - CSS rules, used to style the html document, and dexribes how html element s should be displayed.
+	rules are applied to specific html elements types, and any element type with designated id and/or class
+	.mainTitle, rule applied to all elements with class=.mainTitle designation. class can be applied to multiple elements.
+	ol, rule applied to all <ol> </ol> elements
+	#recipe1, rule applied to all elements with id=recipe1 designation. id must be only used once in webpage and be unique, otherwise browser may not render correctly. -->
+
         .mainTitle {
             color: rgb(222, 53, 222);
         }
@@ -21,9 +31,12 @@
             color: rgb(88, 115, 40);
         }
     </style>
-    <body>
+    </head>
+    
+  <!-- <body> </body> element contains all displayed content of the webpage -->
+	<body>
        
-        <h1 class="mainTitle">Bill's Recipe Book</h1>
+        <h1 class="mainTitle">Bill's Recipe Book</h1> <!-- headline tag, h1 to h6 standard -->
         
         <h2>Contents:</h2>
         
@@ -63,8 +76,10 @@
             </tbody>
         </table>
         
-        <p><strong>Step 1:</strong> butter bread.<br>
-        <strong>Step 2:</strong> add cheese.<br>
+        <p><strong>Step 1:</strong> butter bread. <!-- paragraph tag -->
+        <br> <!-- break tag, line break -->
+		<strong>Step 2:</strong> <!-- bold text -->
+		add cheese.<br>
 <strong>Step 3:</strong> fry in pan on each side.<br>
 </p>
 
@@ -147,4 +162,4 @@
     
     </body>
 </html>
-
+© 2022 GitHub, Inc.
